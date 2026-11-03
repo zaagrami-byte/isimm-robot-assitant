@@ -1,0 +1,8 @@
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+extend-exclude = ["ros2_ws/build", "ros2_ws/install", "ros2_ws/log", "venv", ".venv"]
+
+[tool.ruff.lint]
+# Erreurs réelles uniquement (syntaxe, noms indéfinis). Élargir progressivement.
+select = ["E9", "F63", "F7", "F82"]
