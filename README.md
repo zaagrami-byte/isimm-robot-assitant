@@ -22,7 +22,7 @@ teleoperation, e-stop) complete the system.
 
 ---
 
-## 🎬 The robot in real
+##  The robot in real
 
 <table align="center">
   <tr>
@@ -59,13 +59,13 @@ teleoperation, e-stop) complete the system.
 
 ```mermaid
 flowchart LR
-  subgraph PC["💻 PC — AI and operator"]
+  subgraph PC[" PC — AI and operator"]
     STT[Whisper STT] --> LLM["Qwen2.5 · Ollama<br/>tool calling"]
     LLM --> TOOLS["7 tools<br/>whitelist"]
     LLM --> TTS[Piper TTS]
     UI["operator_ui<br/>PySide6 + gamepad"]
   end
-  subgraph PI["🍓 Raspberry Pi 4 — Robot Core"]
+  subgraph PI[" Raspberry Pi 4 — Robot Core"]
     MIC["robot_audio<br/>microphone / speaker"]
     LIDAR[RPLIDAR] --> RF2O["RF2O<br/>LiDAR odometry"] --> SLAM["SLAM Toolbox<br/>localization"]
     NAV[Nav2] --> SM[velocity_smoother] --> MUX[cmd_vel_mux_node]
@@ -79,7 +79,7 @@ flowchart LR
 
 Details: [docs/architecture.md](docs/architecture.md).
 
-## 🛡️ Safety
+##  Safety
 
 ```
 Nav2 ─► velocity_smoother ─► cmd_vel_mux_node ─► Collision Monitor ─► safety_node ─► motor_controller ─► Arduino ─► motors
@@ -90,7 +90,7 @@ Nav2 ─► velocity_smoother ─► cmd_vel_mux_node ─► Collision Monitor �
 No direct path to the motors. Full table of protections and failure modes:
 [docs/safety.md](docs/safety.md). The AI / robot boundary: [docs/AI_ROBOT_BOUNDARY.md](docs/AI_ROBOT_BOUNDARY.md).
 
-## 🚦 Project status
+##  Project status
 
 - [x] Robot base: motors, LiDAR, IMU, RF2O odometry, multi-level safety
 - [x] Mapping (SLAM Toolbox) and localization
@@ -101,7 +101,7 @@ No direct path to the motors. Full table of protections and failure modes:
 - [ ] ISIMM knowledge base completed (`ai/knowledge/isimm_knowledge.yaml`)
 - [ ] IMU fusion (EKF) in the odometry
 
-## 🚀 Quick start
+##  Quick start
 
 ```bash
 # 1) Clone
@@ -139,7 +139,7 @@ Full guides: [Pi](docs/setup-pi.md) · [PC](docs/setup-pc.md) · [Calibration](d
 
 Details and wiring: [docs/hardware.md](docs/hardware.md).
 
-## 🗂️ Repository structure
+## Repository structure
 
 ```
 ai/             AI assistant (PC): STT, LLM, TTS, tools, ROS 2 bridge          → ai/README.md
@@ -153,7 +153,7 @@ scripts/        Diagnostics (check_robot.sh)
 docs/           Detailed documentation and architecture decisions (ADR)
 ```
 
-## 🧪 Tests
+##  Tests
 
 ```bash
 cd ai && python -m unittest discover -s tests -t . -v                      # AI (no ROS)
@@ -175,7 +175,7 @@ See [docs/testing.md](docs/testing.md).
 
 Golden rule: no code under `ai/` ever publishes `/cmd_vel`.
 
-## 👥 Author and team
+##  Author and team
 
 Designed and built by **Rami ZAAG**, training and robotics projects lead of
 **Club CPU ISIMM**, at the **Institut Supérieur d'Informatique et de Mathématiques de Monastir (ISIMM)**.
@@ -185,7 +185,7 @@ Based on [RF2O](http://mapir.isa.uma.es/work/rf2o) (MAPIR, GPL v3),
 [faster-whisper](https://github.com/SYSTRAN/faster-whisper), [Piper](https://github.com/rhasspy/piper) and
 [Ollama](https://ollama.com).
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 I sincerely thank **all the members of Club CPU-ISIMM** and **the whole team** for their support, encouragement and invaluable help throughout this project.
 
@@ -195,13 +195,13 @@ Thanks also to **Mr. Ahmed Attigue** and **Mr. Karim Sayeb, Secretary General**,
 
 — Rami ZAAG
 
-## 📄 License
+##  License
 
 Code distributed under the [PolyForm Noncommercial License 1.0.0](LICENSE):
 
-- ✅ personal, educational and non-commercial research use;
-- ✅ modifications and forks, with no obligation to publish;
-- ❌ commercial use without prior written permission (see [NOTICE.md](NOTICE.md)).
+-  personal, educational and non-commercial research use;
+-  modifications and forks, with no obligation to publish;
+-  commercial use without prior written permission (see [NOTICE.md](NOTICE.md)).
 
 Copyright © 2026 Rami ZAAG, Club CPU ISIMM. The `rf2o_laser_odometry` package remains under GPL v3.
 # isimm-robot-assitant
