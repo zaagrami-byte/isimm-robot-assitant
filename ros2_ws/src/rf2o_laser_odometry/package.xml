@@ -9,7 +9,8 @@
   <maintainer email="jgmonroy@uma.es">Javier G. Monroy</maintainer>
   <author email="marianojt@uma.es"> Mariano Jaimez</author>
   <author email="jgmonroy@uma.es"> Javier G. Monroy</author>
-  <license>GPL-3.0-only</license>
+  <license>GPL v3</license>
+
   <buildtool_depend>ament_cmake</buildtool_depend>
 
   <depend>rclcpp</depend>

@@ -20,10 +20,10 @@ setup(
     ],
     install_requires=['setuptools'],
     zip_safe=True,
-    maintainer='Rami ZAAG',
-    maintainer_email='zaagrami@gmail.com',
+    maintainer='Club Robotique ISIMM',
+    maintainer_email='robot@isimm.tn',
     description='Robot autonome ISIMM : moteurs, capteurs, sécurité.',
-    license='PolyForm-Noncommercial-1.0.0',,
+    license='MIT',
     entry_points={
         'console_scripts': [
             'scan_self_filter = isimm_robot.scan_self_filter:main',

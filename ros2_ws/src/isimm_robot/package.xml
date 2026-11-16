@@ -4,8 +4,8 @@
   <name>isimm_robot</name>
   <version>1.0.0</version>
   <description>Robot assistant d'accueil ISIMM : moteurs hoverboard, RPLIDAR, odométrie LiDAR (RF2O), sécurité multi-niveaux, SLAM Toolbox et Nav2.</description>
-  <maintainer email="zaagrami@gmail.com">Rami ZAAG</maintainer>
-  <license>PolyForm-Noncommercial-1.0.0</license>
+  <maintainer email="zaagrami@gmail.com">Club Robotique ISIMM</maintainer>
+  <license>MIT</license>
   <depend>rclpy</depend>
   <depend>std_msgs</depend>
   <depend>std_srvs</depend>
